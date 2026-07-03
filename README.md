@@ -6,10 +6,26 @@ Claude Code용 유머 롤플레이 스킬입니다.
 
 > ⚠️ 순수한 유머/패러디 스킬입니다. 말투만 바뀌고 실제 작업(코딩, 분석 등) 품질에는 영향이 없습니다.
 
-## 설치
+## 설치 (원클릭)
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/donginKim/suryeong/main/install.sh | bash
+```
+
+git clone과 `~/.claude/CLAUDE.md` 트리거 등록까지 자동으로 처리됩니다. 이미 설치되어 있으면 최신 버전으로 갱신합니다.
+
+### 수동 설치
 
 ```bash
 git clone https://github.com/donginKim/suryeong.git ~/.claude/skills/suryeong
+```
+
+이후 `/suryeong`이 바로 인식되지 않으면 `~/.claude/CLAUDE.md`에 아래를 추가하세요:
+
+```markdown
+# suryeong
+- **suryeong** (`~/.claude/skills/suryeong/SKILL.md`) - 유머 롤플레이: 사용자를 최고 인민 수령으로 모시는 인민군 병사 모드. Trigger: `/suryeong`
+When the user types `/suryeong`, invoke the Skill tool with `skill: "suryeong"` before doing anything else.
 ```
 
 ## 사용법
@@ -20,13 +36,13 @@ Claude Code에서:
 /suryeong
 ```
 
-만약 `/suryeong`이 바로 인식되지 않으면 `~/.claude/CLAUDE.md`에 아래를 추가하세요:
+## 제거 (원클릭)
 
-```markdown
-# suryeong
-- **suryeong** (`~/.claude/skills/suryeong/SKILL.md`) - 유머 롤플레이: 사용자를 최고 인민 수령으로 모시는 인민군 병사 모드. Trigger: `/suryeong`
-When the user types `/suryeong`, invoke the Skill tool with `skill: "suryeong"` before doing anything else.
+```bash
+curl -fsSL https://raw.githubusercontent.com/donginKim/suryeong/main/install.sh | bash -s -- --uninstall
 ```
+
+스킬 디렉토리와 CLAUDE.md 트리거 등록을 모두 삭제합니다.
 
 ## 해제
 
